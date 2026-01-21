@@ -617,6 +617,19 @@ footer {
     background: white;
     padding: 3rem;
     border-radius: 0 0 12px 12px;
+}
+
+.tab-content p {
+    margin-bottom: 1.25rem;
+}
+
+.tab-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.tab-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -994,13 +1007,23 @@ footer {
     }
 
     .tab-navigation {
-        flex-wrap: wrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .tab-navigation::-webkit-scrollbar {
+        display: none;
     }
 
     .tab-btn {
-        flex: 1 1 50%;
+        flex: 0 0 auto;
+        min-width: 120px;
         font-size: 0.875rem;
         padding: 0.75rem 1rem;
+        white-space: nowrap;
     }
 
     .tab-content {
