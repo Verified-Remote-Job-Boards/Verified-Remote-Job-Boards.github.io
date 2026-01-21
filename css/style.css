@@ -1007,23 +1007,25 @@ footer {
     }
 
     .tab-navigation {
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-
-    .tab-navigation::-webkit-scrollbar {
-        display: none;
+        flex-direction: column;
+        border-radius: 12px;
     }
 
     .tab-btn {
-        flex: 0 0 auto;
-        min-width: 120px;
+        width: 100%;
         font-size: 0.875rem;
-        padding: 0.75rem 1rem;
-        white-space: nowrap;
+        padding: 0.875rem 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        border-left: 3px solid transparent;
+    }
+
+    .tab-btn:last-child {
+        border-bottom: none;
+    }
+
+    .tab-btn.active {
+        border-bottom-color: transparent;
+        border-left-color: var(--primary);
     }
 
     .tab-content {
