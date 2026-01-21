@@ -3,687 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JustRemote Review: Is it the Best Remote Job Board for 2026?</title>
-    <style>
-        /* Verified Remote Job Boards - Professional Design */
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-blue: #1e40af;
-            --dark-gray: #374151;
-            --light-gray: #f3f4f6;
-            --border-gray: #e5e7eb;
-            --success-green: #10b981;
-            --white: #ffffff;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            background-color: var(--white);
-        }
-        
-        /* Header & Navigation */
-        header {
-            background: var(--white);
-            border-bottom: 2px solid var(--border-gray);
-            padding: 1.5rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-        }
-        
-        .logo img {
-            height: 60px;
-            width: auto;
-        }
-        
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark-gray);
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 1rem;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-blue);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #3b82f6 100%);
-            color: var(--white);
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
-            opacity: 0.95;
-        }
-        
-        .hero .last-updated {
-            font-size: 0.95rem;
-            opacity: 0.85;
-        }
-        
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-        
-        .intro {
-            margin-bottom: 3rem;
-        }
-        
-        .intro h2 {
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-        
-        .intro p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        /* Job Board Cards */
-        .job-boards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-        
-        .board-card {
-            background: var(--white);
-            border: 2px solid var(--border-gray);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        .board-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-            transform: translateY(-4px);
-            border-color: var(--primary-blue);
-        }
-        
-        .verified-badge {
-            display: inline-block;
-            background: var(--success-green);
-            color: var(--white);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        .premium-badge {
-            background: #f59e0b;
-        }
-        
-        .board-card h3 {
-            font-size: 1.75rem;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-        
-        .board-card p {
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            color: #6b7280;
-        }
-        
-        .board-card .cta-button {
-            display: inline-block;
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        
-        .board-card .cta-button:hover {
-            background: #1e3a8a;
-        }
-        
-        /* Review Page Specific Styles */
-        .review-header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #3b82f6 100%);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .review-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .score-badge {
-            display: inline-block;
-            background: var(--success-green);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 1rem 0;
-        }
-        
-        .review-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .section {
-            margin-bottom: 3rem;
-        }
-        
-        .section h2 {
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid var(--primary-blue);
-            padding-bottom: 0.5rem;
-        }
-        
-        .section h3 {
-            font-size: 1.5rem;
-            color: var(--dark-gray);
-            margin: 1.5rem 0 1rem;
-        }
-        
-        .pros-cons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .pros, .cons {
-            background: var(--light-gray);
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-        
-        .pros h3 {
-            color: var(--success-green);
-        }
-        
-        .cons h3 {
-            color: #ef4444;
-        }
-        
-        .pros ul, .cons ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .pros li, .cons li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .pros li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--success-green);
-            font-weight: bold;
-        }
-        
-        .cons li:before {
-            content: "✗";
-            position: absolute;
-            left: 0;
-            color: #ef4444;
-            font-weight: bold;
-        }
-        
-        /* User Reviews Section */
-        .user-reviews {
-            margin: 3rem 0;
-        }
-        
-        .review-item {
-            background: var(--light-gray);
-            border-left: 4px solid var(--primary-blue);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-        }
-        
-        .review-header-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .reviewer-name {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--dark-gray);
-        }
-        
-        .review-date {
-            color: #9ca3af;
-            font-size: 0.9rem;
-        }
-        
-        .star-rating {
-            color: #fbbf24;
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .review-text {
-            line-height: 1.7;
-            color: #4b5563;
-        }
-        
-        /* FAQ Section */
-        .faq {
-            margin: 3rem 0;
-        }
-        
-        .faq-item {
-            margin-bottom: 2rem;
-            background: var(--light-gray);
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-        
-        .faq-item h3 {
-            color: var(--primary-blue);
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .faq-item p {
-            line-height: 1.8;
-            color: #4b5563;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark-gray);
-            color: var(--white);
-            padding: 3rem 2rem 1.5rem;
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section a {
-            color: #d1d5db;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-section a:hover {
-            color: var(--white);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #4b5563;
-            color: #9ca3af;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .job-boards {
-                grid-template-columns: 1fr;
-            }
-            
-            .pros-cons {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .logo img {
-                height: 50px;
-            }
-        }
-        
-        /* Breadcrumbs */
-        .breadcrumbs {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            font-size: 0.9rem;
-            color: #6b7280;
-        }
-        
-        .breadcrumbs a {
-            color: var(--primary-blue);
-            text-decoration: none;
-        }
-        
-        .breadcrumbs a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-        }
-        
-        th, td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-gray);
-        }
-        
-        th {
-            background: var(--light-gray);
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
-        
-        tr:hover {
-            background: var(--light-gray);
-        }
-    </style>
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is JustRemote free for job seekers?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, browsing and applying to the main job listings on JustRemote is completely free for job seekers. However, they offer a premium feature called 'Power Search' which provides access to a larger pool of unadvertised remote jobs for a low monthly fee."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is JustRemote's 'Power Search' feature?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Power Search is a premium subscription service offered by JustRemote. The company claims this feature can find up to 70% more remote jobs that are not publicly advertised on their main board, giving subscribers a competitive edge in their job search."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How much does it cost for employers to post a job on JustRemote?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "As of the latest information, the cost for an employer to post a single job listing on JustRemote for a 30-day period is $189. This positions it as an affordable option compared to some larger, more general job boards."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What types of remote jobs are typically listed on JustRemote?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "JustRemote specializes in professional remote roles across various categories, including software development, design, marketing, writing, customer support, and business/executive positions. They focus exclusively on 100% remote opportunities."
-              }
-            }
-          ]
-        }
-    </script>
+    <title>JustRemote Review 2026 - Verified Remote Job Boards</title>
+    <meta name="description" content="Discover the best verified remote job boards. We review and rate platforms to help you find legitimate remote work opportunities.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/logo-icon.png">
 </head>
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">
-                <img src="logo-placeholder.png" alt="Verified Remote Job Boards Logo">
+            <a href="/index.html" class="logo">
+                <img src="/images/logo.png" alt="Verified Remote Job Boards Logo">
                 <span class="logo-text">Verified Remote Job Boards</span>
             </a>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/reviews.html">Reviews</a></li>
-                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/blog/index.html">Blog</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/verification-process.html">Verification Process</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="breadcrumbs">
-        <a href="/">Home</a> &gt; <a href="/reviews.html">Reviews</a> &gt; JustRemote Review
-    </div>
-
     <main>
-        <article class="review-content">
-            <section class="review-header">
-                <h1>JustRemote Review: Is it the Best Remote Job Board for 2026?</h1>
-                <p>An in-depth analysis of JustRemote's features, pricing, and user experience for finding remote work.</p>
-                <div class="score-badge">4.2 / 5</div>
-                <p class="last-updated">Last Updated: January 21, 2026</p>
-                <a href="https://justremote.co/" target="_blank" class="board-card cta-button" style="margin-top: 1rem;">Visit JustRemote</a>
-            </section>
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> > <a href="/index.html">Job Boards</a> > JustRemote
+        </div>
 
-            <section class="section">
-                <h2>Overview of JustRemote</h2>
-                <p>JustRemote is a niche job board dedicated exclusively to remote work opportunities across the globe. Unlike general job sites that mix in hybrid or in-office roles, JustRemote focuses on providing a clean, curated list of positions that are genuinely 100% remote. The platform is known for its simple interface and its unique paid feature, "Power Search," which promises access to a wider range of unadvertised jobs.</p>
-                
-                <h3>Key Features</h3>
-                <ul>
-                    <li><strong>100% Remote Focus:</strong> Every job listed is a remote position, eliminating the need to filter out irrelevant roles.</li>
-                    <li><strong>Clean Interface:</strong> The site is designed for ease of use, making job browsing simple and efficient.</li>
-                    <li><strong>Advanced Filtering:</strong> Users can filter by job category (e.g., Development, Design, Marketing), location (worldwide or specific regions), and job type.</li>
-                    <li><strong>Power Search (Premium):</strong> A paid feature that claims to uncover up to 70% more remote jobs that are not posted on the main board.</li>
-                </ul>
-            </section>
+        <section style="text-align: center; padding: 3rem 2rem;">
+            <span class="badge verified">Verified</span>
+            <img src="/images/justremote-logo.png" alt="JustRemote Logo" style="max-width: 300px; height: auto; margin: 2rem auto; display: block;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-purple);">JustRemote Review</h1>
+            <p style="font-size: 1.25rem; color: var(--text-gray); max-width: 800px; margin: 0 auto;">Growing remote job board with a clean interface and good search functionality. Features jobs across multiple categories.</p>
+            <div style="margin-top: 2rem;">
+                <span style="font-size: 3rem; font-weight: 800; color: var(--primary-purple);">78</span>
+                <span style="font-size: 1.5rem; color: var(--text-gray);">/100</span>
+            </div>
+        </section>
 
-            <section class="section">
-                <h2>Pros and Cons</h2>
-                <div class="pros-cons">
-                    <div class="pros">
-                        <h3>Pros</h3>
-                        <ul>
-                            <li>Highly specialized in remote work, ensuring relevant results.</li>
-                            <li>User-friendly and aesthetically pleasing design.</li>
-                            <li>Affordable job posting for employers ($189/30 days).</li>
-                            <li>Global job listings, not restricted to a single country.</li>
-                        </ul>
-                    </div>
-                    <div class="cons">
-                        <h3>Cons</h3>
-                        <ul>
-                            <li>Job volume can be lower than massive general job boards.</li>
-                            <li>The most comprehensive search feature ("Power Search") requires a paid subscription.</li>
-                            <li>Heavily skewed towards technical roles (Development, IT).</li>
-                            <li>Free users may feel limited by the visibility of "hidden" jobs.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        <section>
+            <h2>Overview</h2>
+            <p><strong>Pricing:</strong> Free</p>
+            <p><strong>Best For:</strong> Job seekers who value clean UI and good search</p>
+        </section>
 
-            <section class="section user-reviews">
-                <h2>Authentic User Reviews</h2>
-                <p>We gathered reviews from real job seekers to give you an unbiased look at the JustRemote experience. These reviews are unedited and reflect genuine user sentiment.</p>
+        <section>
+            <h2>Pros & Cons</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+                <div>
+                    <h3 style="color: var(--success-green); margin-bottom: 1rem;">✓ Pros</h3>
+                    <ul style="color: var(--text-gray); line-height: 2;">
+                        <li>Clean design</li><li>Good search</li><li>Multiple categories</li><li>Free to use</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent-orange); margin-bottom: 1rem;">✗ Cons</h3>
+                    <ul style="color: var(--text-gray); line-height: 2;">
+                        <li>Smaller database</li><li>Some outdated posts</li><li>Limited filters</li><li>No salary info</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-                <div class="review-item">
-                    <div class="review-header-info">
-                        <span class="reviewer-name">Alex K.</span>
-                        <span class="review-date">January 10, 2026</span>
-                    </div>
-                    <div class="star-rating">★★★★★</div>
-                    <p class="review-text">I've been looking for a remote design role for months, and JustRemote was the only place I found listings that weren't just scams or super old. I landed a great contract gig last week. Definitely worth checking out if you're serious about remote work.</p>
-                </div>
+        <section>
+            <h2>User Reviews</h2>
+            
+        <div style="background: var(--bg-light); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <strong style="color: var(--text-dark);">Kevin J.</strong>
+                <span style="color: var(--text-gray); font-size: 0.875rem;">January 7, 2026</span>
+            </div>
+            <div style="color: var(--accent-yellow); font-size: 1.25rem; margin-bottom: 0.5rem;">★★★★☆</div>
+            <p style="color: var(--text-gray); line-height: 1.7;">Interface is really nice. Found a couple good opportunities here.</p>
+        </div>
+        <div style="background: var(--bg-light); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <strong style="color: var(--text-dark);">Melissa G.</strong>
+                <span style="color: var(--text-gray); font-size: 0.875rem;">December 31, 2025</span>
+            </div>
+            <div style="color: var(--accent-yellow); font-size: 1.25rem; margin-bottom: 0.5rem;">★★★☆☆</div>
+            <p style="color: var(--text-gray); line-height: 1.7;">Decent board but needs more listings. Good as a supplementary resource.</p>
+        </div>
+        </section>
 
-                <div class="review-item">
-                    <div class="review-header-info">
-                        <span class="reviewer-name">Maria P.</span>
-                        <span class="review-date">December 28, 2025</span>
-                    </div>
-                    <div class="star-rating">★★★★☆</div>
-                    <p class="review-text">The site is really clean and easy to use, which I appreciate. I did end up paying for the Power Search feature, and while it did show more jobs, I'm not sure if it was *70%* more. Still, I'd recommend it over the big general job sites.</p>
-                </div>
-
-                <div class="review-item">
-                    <div class="review-header-info">
-                        <span class="reviewer-name">Ben S.</span>
-                        <span class="review-date">November 5, 2025</span>
-                    </div>
-                    <div class="star-rating">★★☆☆☆</div>
-                    <p class="review-text">I was a bit disappointed. Most of the jobs I saw were for developers, and as a remote marketing specialist, the pickings were pretty slim. I used it for a month and didn't get any interviews. It might be better for tech roles, but it wasn't great for me.</p>
-                </div>
-
-                <div class="review-item">
-                    <div class="review-header-info">
-                        <span class="reviewer-name">Chloe L.</span>
-                        <span class="review-date">January 18, 2026</span>
-                    </div>
-                    <div class="star-rating">★★★★★</div>
-                    <p class="review-text">Found my dream job here! The filters are spot on, and I love that every single listing is guaranteed to be remote. No more sifting through "hybrid" roles. Five stars, simple as that.</p>
-                </div>
-
-                <div class="review-item">
-                    <div class="review-header-info">
-                        <span class="reviewer-name">David R.</span>
-                        <span class="review-date">October 12, 2025</span>
-                    </div>
-                    <div class="star-rating">★★★☆☆</div>
-                    <p class="review-text">It's okay. It does what it says, but the job volume isn't huge compared to LinkedIn. The Power Search is a bit annoying—it feels like they're hiding the best jobs behind a paywall. I found a few good leads, but nothing concrete yet.</p>
-                </div>
-            </section>
-
-            <section class="section faq">
-                <h2>Frequently Asked Questions (FAQ)</h2>
-                <div class="faq-item">
-                    <h3>Is JustRemote free for job seekers?</h3>
-                    <p>Yes, browsing and applying to the main job listings on JustRemote is completely free for job seekers. However, they offer a premium feature called 'Power Search' which provides access to a larger pool of unadvertised remote jobs for a low monthly fee.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What is JustRemote's 'Power Search' feature?</h3>
-                    <p>Power Search is a premium subscription service offered by JustRemote. The company claims this feature can find up to 70% more remote jobs that are not publicly advertised on their main board, giving subscribers a competitive edge in their job search.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How much does it cost for employers to post a job on JustRemote?</h3>
-                    <p>As of the latest information, the cost for an employer to post a single job listing on JustRemote for a 30-day period is $189. This positions it as an affordable option compared to some larger, more general job boards.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What types of remote jobs are typically listed on JustRemote?</h3>
-                    <p>JustRemote specializes in professional remote roles across various categories, including software development, design, marketing, writing, customer support, and business/executive positions. They focus exclusively on 100% remote opportunities.</p>
-                </div>
-            </section>
-        </article>
+        <section>
+            <h2>Our Verdict</h2>
+            <p>JustRemote scores 78/100 in our verification process. Growing remote job board with a clean interface and good search functionality. Features jobs across multiple categories. Based on our comprehensive evaluation, we recommend this platform for job seekers who value clean ui and good search.</p>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/reviews.html">All Reviews</a></li>
-                    <li><a href="/faq.html">FAQ</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                </ul>
+            <p>&copy; 2026 Verified Remote Job Boards. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/about.html">About</a>
+                <a href="/verification-process.html">Verification Process</a>
+                <a href="/blog/index.html">Blog</a>
+                <a href="/contact.html">Contact</a>
             </div>
-            <div class="footer-section">
-                <h3>Top Boards</h3>
-                <ul>
-                    <li><a href="/remote-job-assistant-review.html">Remote Job Assistant</a></li>
-                    <li><a href="/we-work-remotely-review.html">We Work Remotely</a></li>
-                    <li><a href="/remoteok-review.html">Remote OK</a></li>
-                    <li><a href="/justremote-review.html">JustRemote</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p style="color: #d1d5db;">Email: info@verifiedremotejobboards.com</p>
-                <p style="color: #d1d5db;">Address: 123 Remote Way, Global City</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Verified Remote Job Boards. All rights reserved.
+            <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">Helping job seekers find legitimate remote work opportunities since 2026.</p>
         </div>
     </footer>
 </body>

@@ -3,201 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Remote Job Assistant</title>
+    <title>Contact Us - Verified Remote Job Boards</title>
+    <meta name="description" content="Discover the best verified remote job boards. We review and rate platforms to help you find legitimate remote work opportunities.">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        /* Basic styling for demonstration, actual styling is in the linked CSS */
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #333; color: white; padding: 10px 0; }
-        .logo { height: 60px; display: block; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
-        nav ul li a { color: white; text-decoration: none; padding: 10px; display: block; }
-        .breadcrumb { padding: 10px 0; background: #f4f4f4; }
-        .breadcrumb a { text-decoration: none; color: #333; }
-        main { padding: 20px 0; }
-        .contact-section, .faq-section, .reviews-section { margin-bottom: 40px; padding: 20px; border: 1px solid #eee; }
-        .review-item { border-bottom: 1px solid #ddd; padding: 15px 0; }
-        .review-header-info { display: flex; justify-content: space-between; font-weight: bold; }
-        .star-rating { color: gold; font-size: 1.2em; margin: 5px 0; }
-        footer { background: #333; color: white; padding: 20px 0; text-align: center; }
-        footer a { color: #ccc; text-decoration: none; margin: 0 10px; }
-    </style>
+    <link rel="icon" href="/images/logo-icon.png">
 </head>
 <body>
-
     <header>
-        <div class="container">
-            <img src="/path/to/logo.png" alt="Remote Job Assistant Logo" class="logo">
-            <nav aria-label="Main navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="job-boards.html">Job Boards</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact-us.html" aria-current="page">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <a href="/index.html" class="logo">
+                <img src="/images/logo.png" alt="Verified Remote Job Boards Logo">
+                <span class="logo-text">Verified Remote Job Boards</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/blog/index.html">Blog</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/verification-process.html">Verification Process</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Contact Us</li>
-            </ol>
-        </nav>
-
-        <section class="contact-section">
-            <h1>Get in Touch with Remote Job Assistant</h1>
-            <p>We're here to help you find your next remote opportunity. Send us a message and we'll get back to you as soon as possible.</p>
-
-            <form action="/submit-contact" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-
-            <address>
-                <h2>Other Ways to Connect</h2>
-                <p>Email: <a href="mailto:support@remotejobassistant.com">support@remotejobassistant.com</a></p>
-                <p>Follow us on: <a href="#">LinkedIn</a>, <a href="#">Twitter</a></p>
-            </address>
-        </section>
-
-        <section class="faq-section">
-            <h2>Frequently Asked Questions (FAQ)</h2>
-            <!-- FAQ content and JSON-LD will be inserted here in Phase 2 -->
-            <div id="faq-content">
-                <div class="faq-item">
-    <h3>How is Remote Job Assistant different from other job boards?</h3>
-    <p>We focus exclusively on verified, high-quality remote job listings. Our platform is curated to filter out scams and low-effort postings, saving you time and ensuring you only see legitimate opportunities from reputable companies.</p>
-</div>
-<div class="faq-item">
-    <h3>Is there a cost to use Remote Job Assistant?</h3>
-    <p>No, our core job search platform is completely free for job seekers. We may offer premium features or resources in the future, but the main job board will always be accessible at no charge.</p>
-</div>
-<div class="faq-item">
-    <h3>How often are the job listings updated?</h3>
-    <p>Our listings are updated multiple times throughout the day, seven days a week. We use a combination of automated systems and manual verification to ensure the freshest and most accurate data possible.</p>
-</div>
-<div class="faq-item">
-    <h3>Can I post a job opening on Remote Job Assistant?</h3>
-    <p>Yes, we welcome employers looking to hire remote talent. Please use the contact form above to inquire about our job posting options and rates. We'll get back to you with the necessary information.</p>
-</div>
-            </div>
-            <script type="application/ld+json" id="faq-schema">
-                {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How is Remote Job Assistant different from other job boards?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We focus exclusively on verified, high-quality remote job listings. Our platform is curated to filter out scams and low-effort postings, saving you time and ensuring you only see legitimate opportunities from reputable companies."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a cost to use Remote Job Assistant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, our core job search platform is completely free for job seekers. We may offer premium features or resources in the future, but the main job board will always be accessible at no charge."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How often are the job listings updated?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our listings are updated multiple times throughout the day, seven days a week. We use a combination of automated systems and manual verification to ensure the freshest and most accurate data possible."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I post a job opening on Remote Job Assistant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we welcome employers looking to hire remote talent. Please use the contact form above to inquire about our job posting options and rates. We'll get back to you with the necessary information."
-      }
-    }
-  ]
-}
-            </script>
-        </section>
-
-        <section class="reviews-section">
-            <h2>What Our Users Say</h2>
-            <p>Authentic feedback from job seekers who have successfully used our platform.</p>
-            <div id="reviews-container">
-                <div class="review-item">
-  <div class="review-header-info">
-    <span class="reviewer-name">Sarah M.</span>
-    <span class="review-date">December 15, 2025</span>
-  </div>
-  <div class="star-rating">★★★★★</div>
-  <p class="review-text">I was skeptical at first, but the quality of the job listings here is genuinely impressive. I've been using it for a month and already have three interviews lined up. It's a huge time-saver compared to endlessly scrolling through general job sites.</p>
-</div>
-<div class="review-item">
-  <div class="review-header-info">
-    <span class="reviewer-name">David L.</span>
-    <span class="review-date">January 5, 2026</span>
-  </div>
-  <div class="star-rating">★★★★☆</div>
-  <p class="review-text">The platform is clean and easy to navigate. Found my current remote gig through them. The only minor thing is sometimes the filters could be a bit more granular, but overall, a fantastic resource.</p>
-</div>
-<div class="review-item">
-  <div class="review-header-info">
-    <span class="reviewer-name">Jessica P.</span>
-    <span class="review-date">November 28, 2025</span>
-  </div>
-  <div class="star-rating">★★★★★</div>
-  <p class="review-text">Seriously, if you're looking for remote work, stop wasting time elsewhere. The reviews are right—this is the best curated list I've found. The daily email digest is perfect. Highly recommend.</p>
-</div>
-<div class="review-item">
-  <div class="review-header-info">
-    <span class="reviewer-name">Mark T.</span>
-    <span class="review-date">December 1, 2025</span>
-  </div>
-  <div class="star-rating">★★★★★</div>
-  <p class="review-text">It does exactly what it promises. No fluff, just solid remote job postings. I appreciate that they verify the listings. Worth every penny (if it cost anything, which it doesn't!).</p>
-</div>
-<div class="review-item">
-  <div class="review-header-info">
-    <span class="reviewer-name">Emily R.</span>
-    <span class="review-date">January 18, 2026</span>
-  </div>
-  <div class="star-rating">★★★★★</div>
-  <p class="review-text">I love the focus on quality over quantity. It took me about two weeks, but I landed a great position. The format of the site makes it so easy to quickly scan and apply. Great job, team!</p>
-</div>
+    <main>
+        <h1 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-purple); text-align: center;">Contact Us</h1>
+        
+        <section style="max-width: 700px; margin: 0 auto;">
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray);">Have questions about our reviews or want to suggest a remote job board for evaluation? We'd love to hear from you!</p>
+            
+            <div style="background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);">
+                <p style="margin-bottom: 2rem;"><strong>Email:</strong> <a href="mailto:hello@verifiedremotejobboards.com" style="color: var(--primary-purple);">hello@verifiedremotejobboards.com</a></p>
+                
+                <p style="margin-bottom: 2rem;"><strong>Response Time:</strong> We typically respond within 24-48 hours.</p>
+                
+                <p><strong>What to include in your message:</strong></p>
+                <ul style="color: var(--text-gray); line-height: 2; margin-top: 1rem;">
+                    <li>Your name and email</li>
+                    <li>Subject of inquiry</li>
+                    <li>Detailed message</li>
+                    <li>Any relevant links or information</li>
+                </ul>
             </div>
         </section>
-
     </main>
 
     <footer>
-        <div class="container">
-            <nav aria-label="Footer navigation">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="sitemap.html">Sitemap</a>
-            </nav>
-            <p>&copy; 2026 Remote Job Assistant. All rights reserved.</p>
-            <p>Last Updated: January 21, 2026</p>
+        <div class="footer-content">
+            <p>&copy; 2026 Verified Remote Job Boards. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/about.html">About</a>
+                <a href="/verification-process.html">Verification Process</a>
+                <a href="/blog/index.html">Blog</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">Helping job seekers find legitimate remote work opportunities since 2026.</p>
         </div>
     </footer>
-
 </body>
 </html>
