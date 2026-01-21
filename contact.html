@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Remote Job Assistant</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --accent-color: #28a745;
+            --background-color: #f8f9fa;
+            --text-color: #343a40;
+            --light-text-color: #6c757d;
+            --white: #ffffff;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            flex: 1;
+            padding: 3rem 0;
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb {
+            padding: 10px 0;
+            margin-bottom: 20px;
+            list-style: none;
+            background-color: transparent;
+            border-radius: 0.25rem;
+        }
+
+        .breadcrumb li {
+            display: inline;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb li+li:before {
+            padding: 8px;
+            color: var(--light-text-color);
+            content: "/\00a0"; /* Unicode for slash with non-breaking space */
+        }
+
+        .breadcrumb li a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb li.active {
+            color: var(--light-text-color);
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-muted { color: var(--light-text-color); }
+        .py-5 { padding-top: 3rem; padding-bottom: 3rem; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        h1 { color: var(--text-color); font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        p { margin-top: 0; margin-bottom: 1rem; }
+    </style>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Remote Job Assistant</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="verification-process.html">Verification Process</a>
+                    <a href="blog-index.html">Blog</a>
+                    <a href="comparison.html">Comparisons</a>
+                    <a href="contact.html" style="color: var(--primary-color);">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Contact Us</li>
+            </ol>
+
+            <section class="py-5">
+                <h1 class="text-center mb-4">Get In Touch</h1>
+                <div style="max-width: 700px; margin: 0 auto;">
+    <p class="text-center" style="font-size: 1.1rem; margin-bottom: 2rem;">
+        We value your feedback and inquiries. Please use the form below to send us a message, or contact us directly via email.
+    </p>
+
+    <div style="background-color: var(--white); padding: 2rem; border-radius: 0.5rem; box-shadow: 0 0 20px rgba(0,0,0,0.05);">
+        <h2 style="margin-top: 0; color: var(--primary-color);">Send us a Message</h2>
+        <form action="#" method="POST">
+            <div style="margin-bottom: 1rem;">
+                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full Name</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.25rem; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.25rem; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Subject</label>
+                <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.25rem; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.25rem; box-sizing: border-box; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" style="background-color: var(--primary-color); color: var(--white); padding: 0.75rem 1.5rem; border: none; border-radius: 0.25rem; font-size: 1rem; cursor: pointer; transition: background-color 0.3s;">
+                Send Message
+            </button>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--light-text-color);">
+                Note: This is a non-functional demonstration form.
+            </p>
+        </form>
+    </div>
+
+    <div class="text-center" style="margin-top: 3rem; padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 0.5rem; background-color: var(--white);">
+        <h3 style="color: var(--accent-color); margin-top: 0;">Direct Contact</h3>
+        <p style="font-size: 1.1rem;">
+            For direct inquiries, please email us at:
+        </p>
+        <p style="font-size: 1.5rem; font-weight: bold;">
+            <a href="mailto:support@remotejobassistant.com" style="color: var(--primary-color); text-decoration: none;">support@remotejobassistant.com</a>
+        </p>
+        <p style="font-size: 0.9rem; color: var(--light-text-color);">
+            We aim to respond to all inquiries within 24-48 hours.
+        </p>
+    </div>
+</div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Remote Job Assistant. All rights reserved.</p>
+            <p class="text-muted">
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="terms.html">Terms of Service</a>
+            </p>
+            <p class="text-muted" style="font-size: 0.8rem;">Last Updated: January 21, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Verified Remote Job Boards</title>
+    <style>
+        :root {
+            --primary-color: #007bff; /* A professional blue */
+            --secondary-color: #6c757d; /* Gray for secondary elements */
+            --text-color: #343a40;
+            --background-color: #f8f9fa;
+            --light-gray: #e9ecef;
+            --success-color: #28a745;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 10px 0;
+            background-color: var(--light-gray);
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+        }
+
+        /* Main Content Sections */
+        main {
+            padding-bottom: 50px;
+        }
+
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: var(--text-color);
+            margin-top: 30px;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            margin-top: 15px;
+        }
+
+        /* Verification Process Styling */
+        #verification-process {
+            background-color: var(--background-color);
+            padding: 50px 0;
+        }
+
+        .stage-box {
+            background-color: white;
+            border: 1px solid var(--light-gray);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .stage-box h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .stage-box strong {
+            color: var(--success-color);
+        }
+
+        .score-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .score-table th, .score-table td {
+            border: 1px solid var(--light-gray);
+            padding: 12px;
+            text-align: left;
+        }
+
+        .score-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .score-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Contact Form Styling */
+        #contact {
+            padding: 50px 0;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Verified Remote Job Boards</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/comparison.html">Comparisons</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a> &gt; <span>About Us</span>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="container">
+            <h1>Our Story, Our Mission</h1>
+            <p><strong>Verified Remote Job Boards</strong> was born out of a simple, yet profound frustration: the overwhelming noise and pervasive scams in the online remote job market. Our founders, a small team of remote work veterans, HR specialists, and software engineers, realized that job seekers were spending more time vetting job boards than applying for jobs.</p>
+
+            <h2>Our Mission</h2>
+            <p>Our mission is to be the **single most trusted resource** for finding legitimate, high-quality remote job boards. We are dedicated to cutting through the clutter, applying rigorous, data-driven scrutiny to every platform, and ensuring that when you search for a job, you are searching on a board that is worth your time and trust. We believe that the future of work is remote, and that future must be built on a foundation of transparency and integrity.</p>
+
+            <h2>The Team Behind the Verification</h2>
+            <p>We are a passionate, fully remote team committed to the principles of quality and transparency. Our HR experts understand the hiring landscape, our software engineers build the tools to monitor and analyze job data, and our remote work veterans provide the essential user perspective. We created this resource because we needed it ourselves, and we maintain it with the same dedication we would expect from a service we rely on.</p>
+        </section>
+
+        <!-- Verification Process Section -->
+        <section id="verification-process">
+            <div class="container">
+                <h2>Our Verification Process: The Standard of Trust</h2>
+                <p>At Verified Remote Job Boards, we maintain the highest standards for evaluating and recommending remote job platforms. Our comprehensive verification process ensures that every job board featured on our site meets strict criteria for legitimacy, quality, and user value. This multi-stage vetting methodology has been developed over years of industry research and is continuously refined based on user feedback and market changes.</p>
+
+                <h3>Our 7-Stage Verification Framework</h3>
+
+                <div class="stage-box">
+                    <h3>Stage 1: Initial Legitimacy Assessment (Duration: 3-5 Days)</h3>
+                    <p>The first stage of our verification process focuses on establishing the fundamental legitimacy and operational status of each remote job board. Our research team conducts extensive background checks to ensure the platform is trustworthy and actively maintained.</p>
+                    <h4>Key Evaluation Criteria:</h4>
+                    <p>We begin by verifying the company's legal registration status, including business entity verification through state and federal databases. We examine the platform's operational history, looking for a minimum of six months of consistent activity, though we give preference to platforms with multi-year track records. Domain registration information is analyzed to confirm ownership transparency and longevity, with particular attention paid to WHOIS data and SSL certificate validity.</p>
+                    <p>Our team investigates the leadership and founding team behind each platform, reviewing their professional backgrounds, previous ventures, and industry reputation. We cross-reference this information with LinkedIn profiles, press releases, and industry publications to ensure authenticity. Any platform with anonymous or unverifiable ownership is automatically disqualified from consideration.</p>
+                    <p>Financial stability indicators are assessed by examining funding announcements, revenue models, and business sustainability. We look for transparent pricing structures and clear monetization strategies that don't rely on predatory practices or hidden fees. Platforms that appear financially unstable or use questionable business models are flagged for additional scrutiny or rejection.</p>
+                </div>
+
+                <div class="stage-box">
+                    <h3>Stage 2: Job Listing Quality Analysis (Duration: 7-10 Days)</h3>
+                    <p>The second stage involves an in-depth analysis of the actual job listings hosted on each platform. Our team manually reviews hundreds of job postings to assess quality, legitimacy, and relevance to remote work seekers.</p>
+                    <h4>Comprehensive Quality Metrics:</h4>
+                    <p>We evaluate job posting authenticity by verifying that listings come from real companies with verifiable online presence. Our researchers cross-check company names, websites, and contact information against business registries and corporate databases. We look for red flags such as vague job descriptions, unrealistic salary promises, requests for upfront payments, or suspicious contact methods.</p>
+                    <p>Job description quality is assessed based on completeness, clarity, and professionalism. High-quality platforms feature detailed role descriptions, clear requirements, transparent salary ranges, and comprehensive information about company culture and benefits. We measure the percentage of listings that meet professional standards versus those that appear hastily written or incomplete.</p>
+                    <p>Salary transparency is a critical factor in our evaluation. We analyze what percentage of job listings include salary information, whether ranges are realistic for the roles and experience levels advertised, and how compensation compares to industry standards. Platforms that consistently feature below-market salaries or lack salary transparency receive lower ratings.</p>
+                    <p>The relevance and freshness of listings are monitored continuously. We track how frequently new jobs are posted, how quickly outdated listings are removed, and whether the platform actively curates its content. Platforms with stale listings older than 60 days or duplicate postings are penalized in our scoring system.</p>
+                </div>
+
+                <div class="stage-box">
+                    <h3>Stage 3: User Experience and Accessibility Testing (Duration: 5-7 Days)</h3>
+                    <p>Our third stage focuses on evaluating the user experience from a job seeker's perspective. We conduct extensive usability testing to ensure each platform provides an efficient, intuitive, and accessible job search experience.</p>
+                    <h4>Usability Assessment Framework:</h4>
+                    <p>Navigation and search functionality are tested across multiple devices and browsers. Our team evaluates the effectiveness of search filters, including location restrictions, job categories, experience levels, and salary ranges. We assess how easily users can find relevant opportunities and whether the platform provides advanced search capabilities for power users.</p>
+                    <p>Application process efficiency is measured by tracking the steps required to apply for positions. We evaluate whether platforms allow direct applications, redirect to company websites, or require account creation. The best platforms streamline the application process while maintaining necessary quality controls to prevent spam.</p>
+                    <p>Mobile responsiveness is tested across iOS and Android devices of various screen sizes. We verify that all functionality available on desktop is accessible on mobile, and that the mobile experience is optimized for touch interfaces. In today's mobile-first world, platforms without strong mobile experiences receive significantly lower scores.</p>
+                    <p>Accessibility compliance is evaluated against WCAG 2.1 standards. We test screen reader compatibility, keyboard navigation, color contrast ratios, and alternative text for images. Platforms that prioritize accessibility demonstrate a commitment to serving all job seekers, regardless of ability.</p>
+                </div>
+
+                <div class="stage-box">
+                    <h3>Stage 4: Company and Employer Verification (Duration: 10-14 Days)</h3>
+                    <p>The fourth stage involves verifying the legitimacy of companies posting jobs on each platform. This is one of our most time-intensive processes, as it requires individual investigation of multiple employers on each job board.</p>
+                    <h4>Employer Vetting Protocol:</h4>
+                    <p>We randomly select 50-100 companies from each platform's active listings and conduct thorough background checks. This includes verifying business registration, checking Better Business Bureau ratings, reviewing Glassdoor and other employer review sites, and confirming the company's remote work policies through direct research.</p>
+                    <p>For each sampled company, we verify that the job listing matches the company's actual hiring needs by cross-referencing with the company's official careers page. Discrepancies between the job board listing and the company's own website raise red flags about the platform's curation quality.</p>
+                    <p>We also assess the diversity of employers on each platform. High-quality job boards attract a mix of startups, mid-size companies, and established enterprises across various industries. Platforms dominated by a small number of companies or suspicious of employer concentration receive lower ratings.</p>
+                    <p>Response rates and employer engagement are measured by submitting test applications (with full disclosure) and tracking response times and communication quality. Platforms where employers are responsive and professional score higher than those where applications disappear into black holes.</p>
+                </div>
+
+                <div class="stage-box">
+                    <h3>Stage 5: Pricing and Value Analysis (Duration: 3-5 Days)</h3>
+                    <p>Our fifth stage examines the cost structure and overall value proposition of each platform from both job seeker and employer perspectives.</p>
+                    <h4>Value Assessment Criteria:</h4>
+                    <p>For job seeker-facing platforms, we evaluate whether free access is available and what limitations exist. If subscription fees are required, we assess whether the pricing is reasonable relative to the quality and quantity of job listings provided. We calculate the cost-per-application ratio and compare it against industry benchmarks.</p>
+                    <p>Transparency in pricing is critical. We look for clear, upfront disclosure of all costs, with no hidden fees or surprise charges. Platforms that use deceptive pricing tactics or make cancellation difficult are heavily penalized.</p>
+                    <p>For employer-facing pricing, we evaluate whether the platform charges reasonable fees for job postings and whether these fees correlate with the quality of candidates attracted. We also consider whether the platform offers value-added services such as applicant tracking, screening tools, or employer branding opportunities.</p>
+                    <p>Return on investment is assessed by analyzing user testimonials, success stories, and publicly available data about placement rates and time-to-hire metrics. Platforms that can demonstrate tangible value for both job seekers and employers receive higher ratings.</p>
+                </div>
+
+                <div class="stage-box">
+                    <h3>Stage 6: Customer Support and Resources Evaluation (Duration: 5-7 Days)</h3>
+                    <p>The sixth stage assesses the quality and availability of customer support, as well as the educational resources and tools provided to users.</p>
+                    <h4>Support Quality Metrics:</h4>
+                    <p>We test customer support responsiveness by submitting inquiries through all available channels, including email, live chat, phone support, and help center tickets. Response times are tracked, and the quality of responses is evaluated based on helpfulness, accuracy, and professionalism.</p>
+                    <p>Documentation and self-service resources are reviewed for completeness and clarity. High-quality platforms provide comprehensive FAQs, video tutorials, blog content, and guides that help users maximize their success on the platform.</p>
+                    <p>Community features such as forums, networking opportunities, and peer support are evaluated where available. Platforms that foster community engagement and provide networking opportunities beyond simple job listings receive bonus points.</p>
+                    <p>Additional resources such as resume builders, interview preparation tools, salary calculators, and career advice content are cataloged and assessed for quality. Platforms that go beyond basic job listing functionality to support the entire job search journey score higher in our evaluation.</p>
+                </div>
+
+                <div class="stage-box">
+                    <h3>Stage 7: Ongoing Monitoring and Re-Verification (Continuous)</h3>
+                    <p>Our verification process doesn't end once a platform is approved. We continuously monitor all featured job boards to ensure they maintain our standards over time.</p>
+                    <h4>Continuous Quality Assurance:</h4>
+                    <p>Monthly spot checks involve reviewing new job listings, testing platform functionality, and monitoring user feedback. Any significant changes to pricing, features, or business practices trigger a full re-evaluation.</p>
+                    <p>User feedback integration is a critical component of our ongoing monitoring. We actively solicit and review feedback from job seekers who use the platforms we recommend. Patterns of negative feedback or reports of scams result in immediate investigation and potential removal from our directory.</p>
+                    <p>Industry news monitoring ensures we stay informed about any controversies, data breaches, ownership changes, or other significant events affecting the platforms we feature. We maintain Google Alerts and monitor industry publications to catch any red flags early.</p>
+                    <p>Annual comprehensive re-verification is conducted for all platforms, essentially repeating the entire seven-stage process to ensure continued compliance with our standards. Platforms that have declined in quality or no longer meet our criteria are removed from our recommendations.</p>
+                </div>
+
+                <h3>Our Scoring System</h3>
+                <p>Each remote job board is evaluated across 50+ individual criteria and receives a composite score from 0-100. Only platforms scoring 75 or above are featured on Verified Remote Job Boards. Scores are updated quarterly based on ongoing monitoring and user feedback.</p>
+                <table class="score-table">
+                    <thead>
+                        <tr>
+                            <th>Evaluation Category</th>
+                            <th>Weight (Points)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Legitimacy and Trust</td><td>25 points</td></tr>
+                        <tr><td>Job Listing Quality</td><td>20 points</td></tr>
+                        <tr><td>User Experience</td><td>15 points</td></tr>
+                        <tr><td>Employer Quality</td><td>15 points</td></tr>
+                        <tr><td>Pricing and Value</td><td>10 points</td></tr>
+                        <tr><td>Customer Support</td><td>10 points</td></tr>
+                        <tr><td>Additional Resources</td><td>5 points</td></tr>
+                        <tr><td><strong>Total Score</strong></td><td><strong>100 points</strong></td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Transparency and Independence</h3>
+                <p>We maintain strict editorial independence in our verification process. While some platforms may offer affiliate partnerships, our verification methodology and scoring are never influenced by commercial relationships. Every platform is evaluated using the same rigorous criteria, regardless of any business arrangements.</p>
+                <p>Our team consists of experienced remote work professionals, HR specialists, and career counselors who bring decades of combined expertise to the evaluation process. We do not accept payment for favorable reviews or guaranteed placement in our rankings.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <p>For general inquiries, partnership opportunities, or to report a suspicious job board, please contact us directly:</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@verifiedremotejobboards.com">contact@verifiedremotejobboards.com</a></p>
+            </div>
+
+            <form class="contact-form" action="#" method="POST">
+                <p>Alternatively, use the form below to send us a message. (Note: This form is non-functional for demonstration purposes.)</p>
+                <div>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Verified Remote Job Boards. All rights reserved.</p>
+            <p><strong>Last Updated: January 21, 2026</strong></p>
+            <p><a href="/privacy.html" style="color: white;">Privacy Policy</a> | <a href="/terms.html" style="color: white;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison: We Work Remotely vs Remote Job Assistant</title>
+    <style>
+        :root {
+            --primary-color: #007bff; /* A professional blue for branding */
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #212529;
+            --header-bg: #ffffff;
+            --footer-bg: #343a40;
+            --footer-text: #ffffff;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 0;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 10px 0;
+            font-size: 0.9em;
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        .breadcrumb span {
+            margin: 0 5px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: var(--footer-text);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+
+        /* Pros and Cons */
+        .pros-cons-section {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .platform-summary {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--header-bg);
+        }
+
+        .platform-summary h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .platform-summary ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .platform-summary ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .pros li::before {
+            content: '✓';
+            color: green;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .cons li::before {
+            content: '✗';
+            color: red;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Recommendation */
+        .recommendation {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #e9f7ff; /* Light blue background */
+            border-left: 5px solid var(--primary-color);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .recommendation h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-bar">
+            <div class="logo"><a href="#">Remote Job Assistant</a></div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Job Boards</a>
+                <a href="#">Comparison</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="#">Home</a> <span>/</span> <a href="#">Comparison</a> <span>/</span> <span>We Work Remotely vs Remote Job Assistant</span>
+        </div>
+
+        <h1>Comparison: We Work Remotely vs Remote Job Assistant</h1>
+        <span class="last-updated">Last Updated: January 21, 2026</span>
+
+        <p>Choosing the right platform for finding or posting remote jobs is crucial. We Work Remotely (WWR) is a long-standing, established job board, while Remote Job Assistant (RJA) is a newer, curated resource focused on quality and verification. This detailed comparison will help you decide which platform best suits your needs.</p>
+
+        <h2>Feature Comparison Table</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>We Work Remotely (WWR)</th>
+                    <th>Remote Job Assistant (RJA)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**Primary Focus**</td>
+                    <td>High-traffic, general remote job board. Wide variety of roles.</td>
+                    <td>Curated, verified, and quality-focused remote job listings and resources.</td>
+                </tr>
+                <tr>
+                    <td>**Job Vetting/Verification**</td>
+                    <td>Basic screening; relies on volume. Scams can occasionally slip through.</td>
+                    <td>**Rigorous, multi-step verification process** to ensure legitimacy and quality.</td>
+                </tr>
+                <tr>
+                    <td>**Job Categories**</td>
+                    <td>Tech, Design, Marketing, Sales, Customer Support, and more.</td>
+                    <td>Primarily high-value, professional roles (Tech, Executive, Specialized).</td>
+                </tr>
+                <tr>
+                    <td>**Pricing (Job Posters)**</td>
+                    <td>Premium pricing structure for job postings.</td>
+                    <td>Competitive, value-based pricing focused on delivering verified candidates.</td>
+                </tr>
+                <tr>
+                    <td>**User Experience**</td>
+                    <td>Simple, text-heavy interface. Fast loading.</td>
+                    <td>Modern, clean interface with advanced filtering and resource guides.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Detailed Analysis: We Work Remotely</h2>
+        <div class="pros-cons-section">
+            <div class="platform-summary">
+                <h2>WWR: Pros</h2>
+                <ul class="pros">
+                    <li>**High Volume:** One of the largest and most established remote job boards globally.</li>
+                    <li>**Brand Recognition:** Highly trusted by both job seekers and employers.</li>
+                    <li>**Broad Reach:** Excellent for companies looking for maximum exposure.</li>
+                    <li>**Simple Interface:** Easy to navigate and quickly scan listings.</li>
+                </ul>
+            </div>
+            <div class="platform-summary">
+                <h2>WWR: Cons</h2>
+                <ul class="cons">
+                    <li>**Verification Gaps:** Higher volume means less stringent vetting, increasing risk of low-quality or scam listings.</li>
+                    <li>**High Competition:** Listings receive a massive number of applications.</li>
+                    <li>**Generic Focus:** Less specialized than niche boards.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Detailed Analysis: Remote Job Assistant</h2>
+        <div class="pros-cons-section">
+            <div class="platform-summary">
+                <h2>RJA: Pros</h2>
+                <ul class="pros">
+                    <li>**Verified Quality:** Every job is manually verified, drastically reducing spam and scams.</li>
+                    <li>**Curated Roles:** Focus on high-value, professional, and specialized remote positions.</li>
+                    <li>**Resource Hub:** Provides additional tools, guides, and comparison resources (like this one).</li>
+                    <li>**Modern Experience:** Clean design and superior filtering capabilities.</li>
+                </ul>
+            </div>
+            <div class="platform-summary">
+                <h2>RJA: Cons</h2>
+                <ul class="cons">
+                    <li>**Lower Volume:** Fewer listings than WWR due to the strict verification process.</li>
+                    <li>**Newer Platform:** Still building its employer and job seeker base.</li>
+                    <li>**Niche Focus:** May not cover every single job category.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="recommendation">
+            <h2>Our Recommendation</h2>
+            <p><strong>For Job Seekers:</strong> If your priority is **quality and safety**, and you are looking for a professional, high-value role, **Remote Job Assistant** is the superior choice due to its rigorous verification process. If you prioritize **sheer volume** and are willing to sift through more listings, WWR is a good supplement.</p>
+            <p><strong>For Employers:</strong> If you need **maximum exposure** and high application volume, WWR is effective. If you are looking for **high-quality, pre-vetted candidates** and want to avoid low-effort applications, **Remote Job Assistant** offers a better return on investment.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Remote Job Assistant. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
