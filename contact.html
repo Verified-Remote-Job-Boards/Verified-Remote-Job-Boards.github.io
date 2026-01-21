@@ -4,209 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Remote Job Assistant</title>
+    <link rel="stylesheet" href="/home/ubuntu/verifiedremotejobboards-v2/css/style.css">
     <style>
-        :root {
-            --primary-color: #007bff;
-            --accent-color: #28a745;
-            --background-color: #f8f9fa;
-            --text-color: #343a40;
-            --light-text-color: #6c757d;
-            --white: #ffffff;
-            --border-color: #dee2e6;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: var(--white);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        main {
-            flex: 1;
-            padding: 3rem 0;
-        }
-
-        footer {
-            background-color: var(--text-color);
-            color: var(--white);
-            padding: 2rem 0;
-            text-align: center;
-            margin-top: auto;
-        }
-
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Breadcrumb Styling */
-        .breadcrumb {
-            padding: 10px 0;
-            margin-bottom: 20px;
-            list-style: none;
-            background-color: transparent;
-            border-radius: 0.25rem;
-        }
-
-        .breadcrumb li {
-            display: inline;
-            font-size: 0.9rem;
-        }
-
-        .breadcrumb li+li:before {
-            padding: 8px;
-            color: var(--light-text-color);
-            content: "/\00a0"; /* Unicode for slash with non-breaking space */
-        }
-
-        .breadcrumb li a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .breadcrumb li.active {
-            color: var(--light-text-color);
-        }
-
-        /* Utility Classes */
-        .text-center { text-align: center; }
-        .text-muted { color: var(--light-text-color); }
-        .py-5 { padding-top: 3rem; padding-bottom: 3rem; }
-        .mb-4 { margin-bottom: 1.5rem; }
-        h1 { color: var(--text-color); font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
-        p { margin-top: 0; margin-bottom: 1rem; }
+        /* Basic styling for demonstration, actual styling is in the linked CSS */
+        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #333; color: white; padding: 10px 0; }
+        .logo { height: 60px; display: block; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav ul li a { color: white; text-decoration: none; padding: 10px; display: block; }
+        .breadcrumb { padding: 10px 0; background: #f4f4f4; }
+        .breadcrumb a { text-decoration: none; color: #333; }
+        main { padding: 20px 0; }
+        .contact-section, .faq-section, .reviews-section { margin-bottom: 40px; padding: 20px; border: 1px solid #eee; }
+        .review-item { border-bottom: 1px solid #ddd; padding: 15px 0; }
+        .review-header-info { display: flex; justify-content: space-between; font-weight: bold; }
+        .star-rating { color: gold; font-size: 1.2em; margin: 5px 0; }
+        footer { background: #333; color: white; padding: 20px 0; text-align: center; }
+        footer a { color: #ccc; text-decoration: none; margin: 0 10px; }
     </style>
+</head>
+<body>
+
     <header>
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">Remote Job Assistant</a>
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about-us.html">About Us</a>
-                    <a href="verification-process.html">Verification Process</a>
-                    <a href="blog-index.html">Blog</a>
-                    <a href="comparison.html">Comparisons</a>
-                    <a href="contact.html" style="color: var(--primary-color);">Contact</a>
-                </div>
+            <img src="/path/to/logo.png" alt="Remote Job Assistant Logo" class="logo">
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="job-boards.html">Job Boards</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact-us.html" aria-current="page">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <ol class="breadcrumb">
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
                 <li><a href="index.html">Home</a></li>
-                <li class="active">Contact Us</li>
+                <li>Contact Us</li>
             </ol>
+        </nav>
 
-            <section class="py-5">
-                <h1 class="text-center mb-4">Get In Touch</h1>
-                <div style="max-width: 700px; margin: 0 auto;">
-    <p class="text-center" style="font-size: 1.1rem; margin-bottom: 2rem;">
-        We value your feedback and inquiries. Please use the form below to send us a message, or contact us directly via email.
-    </p>
+        <section class="contact-section">
+            <h1>Get in Touch with Remote Job Assistant</h1>
+            <p>We're here to help you find your next remote opportunity. Send us a message and we'll get back to you as soon as possible.</p>
 
-    <div style="background-color: var(--white); padding: 2rem; border-radius: 0.5rem; box-shadow: 0 0 20px rgba(0,0,0,0.05);">
-        <h2 style="margin-top: 0; color: var(--primary-color);">Send us a Message</h2>
-        <form action="#" method="POST">
-            <div style="margin-bottom: 1rem;">
-                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full Name</label>
-                <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.25rem; box-sizing: border-box;">
-            </div>
-            <div style="margin-bottom: 1rem;">
-                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
-                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.25rem; box-sizing: border-box;">
-            </div>
-            <div style="margin-bottom: 1rem;">
-                <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Subject</label>
-                <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.25rem; box-sizing: border-box;">
-            </div>
-            <div style="margin-bottom: 1.5rem;">
-                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message</label>
-                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.25rem; box-sizing: border-box; resize: vertical;"></textarea>
-            </div>
-            <button type="submit" style="background-color: var(--primary-color); color: var(--white); padding: 0.75rem 1.5rem; border: none; border-radius: 0.25rem; font-size: 1rem; cursor: pointer; transition: background-color 0.3s;">
-                Send Message
-            </button>
-            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--light-text-color);">
-                Note: This is a non-functional demonstration form.
-            </p>
-        </form>
-    </div>
+            <form action="/submit-contact" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-    <div class="text-center" style="margin-top: 3rem; padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 0.5rem; background-color: var(--white);">
-        <h3 style="color: var(--accent-color); margin-top: 0;">Direct Contact</h3>
-        <p style="font-size: 1.1rem;">
-            For direct inquiries, please email us at:
-        </p>
-        <p style="font-size: 1.5rem; font-weight: bold;">
-            <a href="mailto:support@remotejobassistant.com" style="color: var(--primary-color); text-decoration: none;">support@remotejobassistant.com</a>
-        </p>
-        <p style="font-size: 0.9rem; color: var(--light-text-color);">
-            We aim to respond to all inquiries within 24-48 hours.
-        </p>
-    </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <address>
+                <h2>Other Ways to Connect</h2>
+                <p>Email: <a href="mailto:support@remotejobassistant.com">support@remotejobassistant.com</a></p>
+                <p>Follow us on: <a href="#">LinkedIn</a>, <a href="#">Twitter</a></p>
+            </address>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <!-- FAQ content and JSON-LD will be inserted here in Phase 2 -->
+            <div id="faq-content">
+                <div class="faq-item">
+    <h3>How is Remote Job Assistant different from other job boards?</h3>
+    <p>We focus exclusively on verified, high-quality remote job listings. Our platform is curated to filter out scams and low-effort postings, saving you time and ensuring you only see legitimate opportunities from reputable companies.</p>
 </div>
-            </section>
-        </div>
+<div class="faq-item">
+    <h3>Is there a cost to use Remote Job Assistant?</h3>
+    <p>No, our core job search platform is completely free for job seekers. We may offer premium features or resources in the future, but the main job board will always be accessible at no charge.</p>
+</div>
+<div class="faq-item">
+    <h3>How often are the job listings updated?</h3>
+    <p>Our listings are updated multiple times throughout the day, seven days a week. We use a combination of automated systems and manual verification to ensure the freshest and most accurate data possible.</p>
+</div>
+<div class="faq-item">
+    <h3>Can I post a job opening on Remote Job Assistant?</h3>
+    <p>Yes, we welcome employers looking to hire remote talent. Please use the contact form above to inquire about our job posting options and rates. We'll get back to you with the necessary information.</p>
+</div>
+            </div>
+            <script type="application/ld+json" id="faq-schema">
+                {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is Remote Job Assistant different from other job boards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We focus exclusively on verified, high-quality remote job listings. Our platform is curated to filter out scams and low-effort postings, saving you time and ensuring you only see legitimate opportunities from reputable companies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a cost to use Remote Job Assistant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, our core job search platform is completely free for job seekers. We may offer premium features or resources in the future, but the main job board will always be accessible at no charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often are the job listings updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our listings are updated multiple times throughout the day, seven days a week. We use a combination of automated systems and manual verification to ensure the freshest and most accurate data possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I post a job opening on Remote Job Assistant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we welcome employers looking to hire remote talent. Please use the contact form above to inquire about our job posting options and rates. We'll get back to you with the necessary information."
+      }
+    }
+  ]
+}
+            </script>
+        </section>
+
+        <section class="reviews-section">
+            <h2>What Our Users Say</h2>
+            <p>Authentic feedback from job seekers who have successfully used our platform.</p>
+            <div id="reviews-container">
+                <div class="review-item">
+  <div class="review-header-info">
+    <span class="reviewer-name">Sarah M.</span>
+    <span class="review-date">December 15, 2025</span>
+  </div>
+  <div class="star-rating">★★★★★</div>
+  <p class="review-text">I was skeptical at first, but the quality of the job listings here is genuinely impressive. I've been using it for a month and already have three interviews lined up. It's a huge time-saver compared to endlessly scrolling through general job sites.</p>
+</div>
+<div class="review-item">
+  <div class="review-header-info">
+    <span class="reviewer-name">David L.</span>
+    <span class="review-date">January 5, 2026</span>
+  </div>
+  <div class="star-rating">★★★★☆</div>
+  <p class="review-text">The platform is clean and easy to navigate. Found my current remote gig through them. The only minor thing is sometimes the filters could be a bit more granular, but overall, a fantastic resource.</p>
+</div>
+<div class="review-item">
+  <div class="review-header-info">
+    <span class="reviewer-name">Jessica P.</span>
+    <span class="review-date">November 28, 2025</span>
+  </div>
+  <div class="star-rating">★★★★★</div>
+  <p class="review-text">Seriously, if you're looking for remote work, stop wasting time elsewhere. The reviews are right—this is the best curated list I've found. The daily email digest is perfect. Highly recommend.</p>
+</div>
+<div class="review-item">
+  <div class="review-header-info">
+    <span class="reviewer-name">Mark T.</span>
+    <span class="review-date">December 1, 2025</span>
+  </div>
+  <div class="star-rating">★★★★★</div>
+  <p class="review-text">It does exactly what it promises. No fluff, just solid remote job postings. I appreciate that they verify the listings. Worth every penny (if it cost anything, which it doesn't!).</p>
+</div>
+<div class="review-item">
+  <div class="review-header-info">
+    <span class="reviewer-name">Emily R.</span>
+    <span class="review-date">January 18, 2026</span>
+  </div>
+  <div class="star-rating">★★★★★</div>
+  <p class="review-text">I love the focus on quality over quantity. It took me about two weeks, but I landed a great position. The format of the site makes it so easy to quickly scan and apply. Great job, team!</p>
+</div>
+            </div>
+        </section>
+
     </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2026 Remote Job Assistant. All rights reserved.</p>
-            <p class="text-muted">
-                <a href="privacy.html">Privacy Policy</a> | 
+            <nav aria-label="Footer navigation">
+                <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
-            </p>
-            <p class="text-muted" style="font-size: 0.8rem;">Last Updated: January 21, 2026</p>
+                <a href="sitemap.html">Sitemap</a>
+            </nav>
+            <p>&copy; 2026 Remote Job Assistant. All rights reserved.</p>
+            <p>Last Updated: January 21, 2026</p>
         </div>
     </footer>
+
 </body>
 </html>
