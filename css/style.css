@@ -1252,25 +1252,68 @@ footer {
    VERIFICATION PAGE STYLES
    =========================================== */
 
-/* Verification Hero */
+/* Verification Hero - Enhanced to match homepage/review page strength */
 .verification-hero {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    padding: 4rem 2rem;
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient overlay for brand consistency and text readability */
+.verification-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.85), rgba(168, 85, 247, 0.85));
+    z-index: 0;
+}
+
+.verification-hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 .verification-hero h1 {
-    font-size: 2.75rem;
-    margin-bottom: 1rem;
+    font-size: 3.25rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
     color: white;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+.verification-hero .hero-subtitle,
 .hero-subtitle {
-    font-size: 1.25rem;
-    opacity: 0.9;
-    max-width: 600px;
+    font-size: 1.375rem;
+    opacity: 0.95;
+    max-width: 650px;
     margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Optional hero badge for extra polish */
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 /* Container */
@@ -1724,15 +1767,22 @@ footer .footer-content {
 /* Mobile Responsive for New Sections */
 @media (max-width: 768px) {
     .verification-hero {
-        padding: 3rem 1rem;
+        padding: 3.5rem 1.5rem;
     }
 
     .verification-hero h1 {
         font-size: 2rem;
     }
 
+    .verification-hero .hero-subtitle,
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.0625rem;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+        margin-bottom: 1rem;
     }
 
     .container {
@@ -1774,5 +1824,40 @@ footer .footer-content {
     footer .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+}
+
+/* ===========================================
+   INJECTED HEADER LOGO FIX
+   Ensures logo displays correctly when header
+   is injected via header.js into #site-header
+   =========================================== */
+
+#site-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+#site-header .logo img {
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+#site-header nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #site-header .logo img {
+        max-height: 40px;
     }
 }
