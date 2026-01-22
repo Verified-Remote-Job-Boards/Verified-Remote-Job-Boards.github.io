@@ -52,10 +52,7 @@ nav {
 }
 
 .logo img {
-    height: 50px;
-    width: auto;
-    object-fit: contain;
-    aspect-ratio: auto;
+    max-height: 55px;
 }
 
 .logo-text {
@@ -1875,10 +1872,7 @@ footer .footer-content {
 }
 
 #site-header .logo img {
-    height: 50px;
-    width: auto;
-    object-fit: contain;
-    aspect-ratio: auto;
+    max-height: 55px;
 }
 
 #site-header nav {
@@ -1892,7 +1886,6 @@ footer .footer-content {
 
 @media (max-width: 768px) {
     #site-header .logo img {
-        height: 40px;
-        width: auto;
+        max-height: 40px;
     }
 }
