@@ -647,6 +647,13 @@ footer {
     margin-top: 2rem;
 }
 
+/* Remove box-shadow from FAQ questions inside tabs */
+.tab-content .faq-question h3 {
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .intro-text {
     font-size: 1.125rem;
     line-height: 1.8;
