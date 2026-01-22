@@ -52,8 +52,9 @@ nav {
 }
 
 .logo img {
-    height: 80px;
+    max-height: 50px;
     width: auto;
+    height: auto;
 }
 
 .logo-text {
@@ -296,7 +297,7 @@ footer {
 
 @media (max-width: 768px) {
     .logo img {
-        height: 60px;
+        max-height: 40px;
     }
     
     .logo-text {
