@@ -9,20 +9,9 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <!-- Placeholder for a logo image, ensuring the 60px height requirement is met by the CSS -->
-                <img src="/assets/logo.png" alt="Logo" style="height: 60px;">
-                <span class="logo-text">Verified Remote Job Boards</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/designers">For Designers</a></li>
-                <li><a href="/developers">For Developers</a></li>
-                <li><a href="/about">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header injected by header.js -->
+    <div id="site-header"></div>
+
 
     <main>
         <div class="container">
@@ -40,7 +29,6 @@
                     <h1>Best Remote Job Boards for Graphic Designers</h1>
                     <p>The definitive guide to the top 5 platforms for finding high-quality, remote graphic design roles, complete with authentic user reviews.</p>
                     <p class="last-updated">Last Updated: January 21, 2026</p>
-                </header>
 
                 <section class="intro">
                     <h2>Introduction</h2>
@@ -275,14 +263,9 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <!-- Footer content here -->
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Verified Remote Job Boards. All rights reserved.
-        </div>
-    </footer>
+    <!-- Footer injected by footer.js -->
+    <div id="site-footer"></div>
+
 
 
 
@@ -330,5 +313,8 @@
 
 
 
+    <!-- Shared Components -->
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>

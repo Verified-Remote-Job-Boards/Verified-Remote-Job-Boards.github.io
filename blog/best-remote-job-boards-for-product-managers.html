@@ -9,25 +9,17 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <!-- Logo must be 60px height in header (class="logo") -->
-                <img src="logo-placeholder.png" alt="Remote Job Hub Logo" style="height: 60px;">
-                <span class="logo-text">Remote Job Hub</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/boards">Job Boards</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/about">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header injected by header.js -->
+    <div id="site-header"></div>
+
 
     <!-- Breadcrumb navigation -->
-    <div class="breadcrumbs">
-        <a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; Best Remote Job Boards for Product Managers
+    <div class="container">
+        <div class="breadcrumbs">
+                    <a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; Best Remote Job Boards for Product Managers
+        </div>
     </div>
+
 
     <main>
         <!-- Hero Section - Content from the first two paragraphs and last updated -->
@@ -279,33 +271,12 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/boards">All Job Boards</a></li>
-                    <li><a href="/guides">Guides</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="/category/product-manager">Product Manager</a></li>
-                    <li><a href="/category/software-engineer">Software Engineer</a></li>
-                    <li><a href="/category/design">Design</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>About</h3>
-                <p>Curating the best remote job opportunities for specialized roles.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Remote Job Hub. All rights reserved.
-        </div>
-    </footer>
+    <!-- Footer injected by footer.js -->
+    <div id="site-footer"></div>
 
+
+    <!-- Shared Components -->
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>

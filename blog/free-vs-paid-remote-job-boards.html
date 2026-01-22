@@ -40,24 +40,16 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <img src="/path/to/logo.png" alt="Remote Job Assistant Logo">
-                <span class="logo-text">Remote Job Assistant</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/verified-boards.html">Verified Boards</a></li>
-                <li><a href="/reviews.html">Reviews</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header injected by header.js -->
+    <div id="site-header"></div>
 
-    <div class="breadcrumbs">
-        <a href="/">Home</a> &gt; <a href="/blog.html">Blog</a> &gt; Free vs. Paid Remote Job Boards
+
+    <div class="container">
+        <div class="breadcrumbs">
+                    <a href="/">Home</a> &gt; <a href="/blog.html">Blog</a> &gt; Free vs. Paid Remote Job Boards
+        </div>
     </div>
+
 
     <main>
         <article>
@@ -195,32 +187,11 @@
         </article>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Dedicated to connecting job seekers with the best verified remote opportunities worldwide.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/verified-boards.html">Verified Boards</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li>Email: info@remotejobassistant.com</li>
-                    <li>Support: support@remotejobassistant.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Remote Job Assistant. All rights reserved.
-        </div>
-    </footer>
+    <!-- Footer injected by footer.js -->
+    <div id="site-footer"></div>
+
+    <!-- Shared Components -->
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>

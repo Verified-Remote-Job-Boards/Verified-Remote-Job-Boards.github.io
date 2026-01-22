@@ -41,21 +41,9 @@
 </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <!-- Logo must be 60px height as per CSS rule for .logo img -->
-                <img src="/assets/logo.svg" alt="Verified Remote Job Boards Logo">
-                <span class="logo-text">Verified Remote Jobs</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/boards.html">Job Boards</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header injected by header.js -->
+    <div id="site-header"></div>
+
 
     <main>
         <div class="hero">
@@ -209,32 +197,11 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Dedicated to providing verified, scam-free remote job listings and resources for job seekers worldwide.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/boards.html">Job Boards</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Verified Remote Job Boards. All rights reserved.
-        </div>
-    </footer>
+    <!-- Footer injected by footer.js -->
+    <div id="site-footer"></div>
+
+    <!-- Shared Components -->
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>

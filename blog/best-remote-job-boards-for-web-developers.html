@@ -47,24 +47,16 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <img src="/images/logo.png" alt="Logo" style="height: 60px;">
-                <span class="logo-text">RemoteDev Hub</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/guides">Guides</a></li>
-                <li><a href="/reviews">Reviews</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header injected by header.js -->
+    <div id="site-header"></div>
 
-    <div class="breadcrumbs">
-        <a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; Best Remote Job Boards for Web Developers
+
+    <div class="container">
+        <div class="breadcrumbs">
+                    <a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; Best Remote Job Boards for Web Developers
+        </div>
     </div>
+
 
     <main>
         <section class="hero">
@@ -225,32 +217,11 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Dedicated to helping web developers find the best remote opportunities worldwide. We verify and review every platform.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/guides">Guides</a></li>
-                    <li><a href="/reviews">Reviews</a></li>
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li>Email: info@remotedevhub.com</li>
-                    <li>Twitter: @RemoteDevHub</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 RemoteDev Hub. All rights reserved.
-        </div>
-    </footer>
+    <!-- Footer injected by footer.js -->
+    <div id="site-footer"></div>
+
+    <!-- Shared Components -->
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>

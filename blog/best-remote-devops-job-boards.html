@@ -49,19 +49,9 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <img src="/images/logo.png" alt="Remote Job Assistant Logo" style="height: 60px;">
-                <span class="logo-text">Remote Job Assistant</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/jobs">Jobs</a></li>
-                <li><a href="/about">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header injected by header.js -->
+    <div id="site-header"></div>
+
 
     <nav class="breadcrumbs" aria-label="breadcrumb">
         <a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; Best Remote Job Boards for DevOps Engineers
@@ -325,33 +315,12 @@
 
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Remote Job Assistant</h3>
-                <p>Connecting top talent with verified remote-first companies.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/jobs">All Remote Jobs</a></li>
-                    <li><a href="/blog">Remote Work Blog</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="/jobs/devops">DevOps Jobs</a></li>
-                    <li><a href="/jobs/sre">SRE Jobs</a></li>
-                    <li><a href="/jobs/cloud">Cloud Jobs</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Remote Job Assistant. All rights reserved.
-        </div>
-    </footer>
+    <!-- Footer injected by footer.js -->
+    <div id="site-footer"></div>
 
+
+    <!-- Shared Components -->
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>
