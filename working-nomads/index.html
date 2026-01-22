@@ -28,25 +28,8 @@
     <link rel="icon" href="/images/logo-icon.png">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <img src="/images/logo.png" alt="Verified Remote Job Boards Logo">
-            </a>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/verification-process/">Verification Process</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header injected by header.js -->
+    <div id="site-header"></div>
 
     <main>
         <!-- Hero Section -->
@@ -846,17 +829,8 @@
     }
     </script>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Verified Remote Job Boards. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="/about/">About</a>
-                <a href="/verification-process/">Verification Process</a>
-                <a href="/blog/">Blog</a>
-                <a href="/contact/">Contact</a>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer injected by footer.js -->
+    <div id="site-footer"></div>
 
     <script>
         // Tab switching functionality
@@ -920,5 +894,8 @@
             }
         });
     </script>
+    <!-- Shared Components -->
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>
