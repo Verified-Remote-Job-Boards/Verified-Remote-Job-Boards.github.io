@@ -1360,37 +1360,70 @@ footer {
 
 .principles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
 .principle-card {
-    background: #f9fafb;
-    padding: 1.5rem;
-    border-radius: 12px;
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
 }
 
 .principle-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.15);
+    border-color: var(--primary);
 }
 
 .principle-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.25rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
 }
 
 .principle-card h4 {
     color: var(--dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 700;
 }
 
 .principle-card p {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     color: var(--gray-600);
     margin: 0;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .principle-card {
+        min-height: auto;
+    }
 }
 
 /* Verification Stages Section */
