@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/about/">About</a></li>
                 <li><a href="/verification-process/">Verification Process</a></li>
+                <li><a href="/submit/">Submit a Job Board</a></li>
                 <li><a href="/contact/">Contact</a></li>
             </ul>
         </nav>
