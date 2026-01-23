@@ -1,5 +1,5 @@
 // Review Form Component
-// Add <div id="review-form" data-jobboard="FlexJobs"></div> to any review page
+// Add <div id="review-form"></div> to any review page
 // Then include this script: <script src="/js/review-form.js"></script>
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -7,22 +7,41 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!reviewFormContainer) return;
     
-    const jobBoard = reviewFormContainer.getAttribute('data-jobboard') || 'Unknown';
+    // Formspree form ID
+    const formspreeId = 'mkojjjjg';
     
-    // IMPORTANT: Replace YOUR_FORMSPREE_ID with your actual Formspree form ID
-    const formspreeId = 'YOUR_FORMSPREE_ID';
+    // Job boards list for dropdown
+    const jobBoards = [
+        'Remote Job Assistant',
+        'FlexJobs',
+        'We Work Remotely',
+        'Remote.co',
+        'DailyRemote',
+        'Jobspresso',
+        'JustRemote',
+        'NoDesk',
+        'Remote OK',
+        'RemoteRocketship',
+        'Remotive',
+        'Working Nomads'
+    ];
+    
+    // Generate dropdown options
+    const jobBoardOptions = jobBoards.map(board => 
+        `<option value="${board}">${board}</option>`
+    ).join('');
     
     reviewFormContainer.innerHTML = `
         <div class="review-submission-component">
             <div class="review-submission-header">
                 <h3>Share Your Experience</h3>
-                <p>Used ${jobBoard}? Help others make informed decisions by sharing your honest review.</p>
+                <p>Used one of these platforms? Help others make informed decisions by sharing your honest review.</p>
             </div>
             
             <div class="review-submission-body">
                 <!-- Step 1: Star Rating Selection -->
                 <div class="rating-selection-step">
-                    <label class="rating-prompt">How would you rate ${jobBoard}?</label>
+                    <label class="rating-prompt">How would you rate your experience?</label>
                     <div class="star-rating-selector" role="radiogroup" aria-label="Rating">
                         <button type="button" class="star-btn" data-rating="1" aria-label="1 star">
                             <svg viewBox="0 0 24 24" class="star-icon"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -45,9 +64,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <!-- Step 2: Review Form (revealed after rating) -->
                 <form action="https://formspree.io/f/${formspreeId}" method="POST" class="review-form-fields" style="display: none;">
-                    <input type="hidden" name="job_board" value="${jobBoard}">
                     <input type="hidden" name="rating" id="rating-input" value="">
-                    <input type="hidden" name="_subject" value="New ${jobBoard} Review Submission">
+                    <input type="hidden" name="_subject" value="New Job Board Review Submission">
+                    
+                    <div class="form-group">
+                        <label for="job-board">Which platform are you reviewing? <span class="required">*</span></label>
+                        <select id="job-board" name="job_board" required>
+                            <option value="">Select a job board...</option>
+                            ${jobBoardOptions}
+                        </select>
+                    </div>
                     
                     <div class="form-group">
                         <label for="review-title">Review Title</label>
