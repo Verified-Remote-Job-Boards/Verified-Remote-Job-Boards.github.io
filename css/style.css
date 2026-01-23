@@ -2149,3 +2149,335 @@ footer .footer-content {
         font-size: 1.25rem;
     }
 }
+
+/* ===========================================
+   REVIEW SUBMISSION COMPONENT STYLES
+   Trustpilot-inspired review form
+   =========================================== */
+
+/* Container */
+.review-submission-component {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Header */
+.review-submission-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.review-submission-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+}
+
+.review-submission-header p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Body */
+.review-submission-body {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Star Rating Selection */
+.rating-selection-step {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.rating-prompt {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+}
+
+.star-rating-selector {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.star-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: transform 0.15s ease;
+}
+
+.star-btn:hover {
+    transform: scale(1.15);
+}
+
+.star-btn:focus {
+    outline: none;
+}
+
+.star-btn:focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.star-icon {
+    width: 40px;
+    height: 40px;
+    fill: #d1d5db;
+    transition: fill 0.15s ease;
+}
+
+.star-btn.highlighted .star-icon,
+.star-btn.selected .star-icon {
+    fill: #fbbf24;
+}
+
+.star-btn.selected .star-icon {
+    fill: #f59e0b;
+}
+
+.rating-label-text {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6b7280;
+    min-height: 1.5rem;
+}
+
+/* Form Fields */
+.review-form-fields {
+    padding-top: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+    animation: reviewSlideDown 0.3s ease;
+}
+
+@keyframes reviewSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Review form specific form-group styles to avoid conflicts */
+.review-form-fields .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.review-form-fields .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.review-form-fields .form-group label .required {
+    color: #ef4444;
+}
+
+.review-form-fields .form-group label .lock-icon {
+    color: #9ca3af;
+}
+
+.review-form-fields .form-group input[type="text"],
+.review-form-fields .form-group input[type="email"],
+.review-form-fields .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #1f2937;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.review-form-fields .form-group input[type="text"]:hover,
+.review-form-fields .form-group input[type="email"]:hover,
+.review-form-fields .form-group textarea:hover {
+    border-color: #d1d5db;
+}
+
+.review-form-fields .form-group input[type="text"]:focus,
+.review-form-fields .form-group input[type="email"]:focus,
+.review-form-fields .form-group textarea:focus {
+    outline: none;
+    border-color: #10b981;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.review-form-fields .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.field-hint {
+    display: block;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-top: 0.35rem;
+}
+
+.field-hint.char-count {
+    transition: color 0.2s ease;
+}
+
+.field-hint.char-count.warning {
+    color: #f59e0b;
+}
+
+/* Form Row (side by side fields) */
+.review-form-fields .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 500px) {
+    .review-form-fields .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Footer */
+.review-form-fields .form-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+.moderation-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0 0 1.25rem 0;
+}
+
+.moderation-notice svg {
+    flex-shrink: 0;
+    color: #10b981;
+}
+
+/* Submit Button */
+.submit-review-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-review-btn:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.submit-review-btn:active {
+    transform: translateY(0);
+}
+
+.submit-review-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.submit-review-btn svg {
+    flex-shrink: 0;
+}
+
+/* Success Message */
+.review-success-message {
+    text-align: center;
+    padding: 2rem 1rem;
+    animation: reviewFadeIn 0.4s ease;
+}
+
+@keyframes reviewFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.review-success-message svg {
+    margin-bottom: 1rem;
+}
+
+.review-success-message h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+}
+
+.review-success-message p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive adjustments for review form */
+@media (max-width: 640px) {
+    .review-submission-body {
+        padding: 1.5rem;
+        margin: 0 -0.5rem;
+        border-radius: 8px;
+    }
+    
+    .review-submission-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .star-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .star-rating-selector {
+        gap: 0.25rem;
+    }
+}
