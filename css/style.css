@@ -2460,6 +2460,41 @@ footer .footer-content {
     margin-right: auto;
 }
 
+/* Select dropdown styling for review form */
+.review-form-fields .form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #1f2937;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.review-form-fields .form-group select:hover {
+    border-color: #d1d5db;
+}
+
+.review-form-fields .form-group select:focus {
+    outline: none;
+    border-color: #10b981;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.review-form-fields .form-group select option {
+    padding: 0.5rem;
+}
+
 /* Responsive adjustments for review form */
 @media (max-width: 640px) {
     .review-submission-body {
